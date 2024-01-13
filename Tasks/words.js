@@ -1,6 +1,6 @@
 // Count words in a string
-// Step w:
-// Using const to declare variables that don't change within a block
+// Step 3:
+// Using === operator instead of == for strict comparison
 const countWords = (s) => {
   let numberOfWordsInS = 0;
   let flag = false;
@@ -26,3 +26,4 @@ const countWords = (s) => {
 };
 
 module.exports = countWords;
+
