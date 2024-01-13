@@ -1,6 +1,6 @@
 // Replace substring with newstr
-//Step 1:
-// Improve code style and readability:
+//Step 2:
+// Using const to declare variables if they don't change
 
 const replaceSubstring = (str, substr, newstr) => {
   if (substr === '') {
