@@ -1,6 +1,6 @@
 // Count words in a string
-// Step 1:
-// Improve code style and readability
+// Step w:
+// Using const to declare variables that don't change within a block
 const countWords = (s) => {
   let numberOfWordsInS = 0;
   let flag = false;
