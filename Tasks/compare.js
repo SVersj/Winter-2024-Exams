@@ -14,4 +14,4 @@ const compare = (firstValues, ...parametersList) => {
   return result;
 };
 
-module.exports = compare;;
+module.exports = compare;
