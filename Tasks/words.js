@@ -1,41 +1,28 @@
 // Count words in a string
+// Step 1:
+// Improve code style and readability
+const countWords = (s) => {
+  let numberOfWordsInS = 0;
+  let flag = false;
 
-Words = function (s) {
-  number_of_words_in_s = 0;
-  flag = false;
-  for (c of s) {
+  for (let c of s) {
     if (!flag) {
       if (c === ' ') {
-        if (flag === true) {
-          flag = false;
-        } else {
-          flag = false;
-        }
+        flag = false;
       } else {
-        if (flag === true) {
-          flag = true;
-        } else {
-          flag = true;
-        }
-        number_of_words_in_s++;
+        flag = true;
+        numberOfWordsInS++;
       }
     } else {
       if (c === ' ') {
-        if (flag === true) {
-          flag = false;
-        } else {
-          flag = false;
-        }
+        flag = false;
       } else {
-        if (flag === true) {
-          flag = true;
-        } else {
-          flag = true;
-        }
+        flag = true;
       }
     }
   }
-  return number_of_words_in_s;
+
+  return numberOfWordsInS;
 };
 
-module.exports = Words;
+module.exports = countWords;
