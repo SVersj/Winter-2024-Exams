@@ -1,9 +1,6 @@
 // Get one random element from an array
-// Step 1:
-// Rename the array for readability
-const SAMPLE = (array) => {
-  array = array[Math.floor(Math.random() * array.length)];
-  return array;
-};
+// Step 2:
+// Remove the extra variable and use a shorthand notation for the return value:
+const sample = array => array[Math.floor(Math.random() * array.length)];
 
-module.exports = SAMPLE;
+module.exports = sample;
