@@ -1,6 +1,7 @@
 // Generate random integer value in given range
-
-Random = (min, max) => {
+//Step 1:
+// Improve function naming and parameters
+const getRandomNumber = (min, max) => {
   if (max === undefined) {
     max = min;
     return Math.floor(Math.random() * (max + 1));
@@ -9,4 +10,4 @@ Random = (min, max) => {
   }
 };
 
-module.exports = Random;
+module.exports = getRandomNumber;
