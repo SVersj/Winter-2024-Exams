@@ -1,20 +1,19 @@
 // Sum all numbers from an array
+//Step 1:
+// Improve code style and readability:
 
-const k = (sum = function (s = () => {}) {
-  sum = [0];
-  let k = 5;
-  for (i of s) {
-    let t = typeof i;
-    if (t === 'number') {
-      if (sum.length > 0) {
-        const new_Sum = sum[sum.length - 1] + i;
-        sum.push(new_Sum);
-      }
+const sum = (arr = function (input = []) {
+  let result = [0];
+
+  for (let item of input) {
+    if (typeof item === 'number') {
+      const newSum = result[result.length - 1] + item;
+      result.push(newSum);
     }
   }
-  sum[0];
-  return sum[sum.length - 1];
-  sum.push(sum.length - 1);
+
+  return result[0];
 });
 
 module.exports = sum;
+
