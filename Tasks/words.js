@@ -1,24 +1,16 @@
 // Count words in a string
-// Step 3:
-// Using === operator instead of == for strict comparison
+// Step 4:
+// Reduce redundant conditions and improve logic
 const countWords = (s) => {
   let numberOfWordsInS = 0;
   let flag = false;
 
   for (let c of s) {
-    if (!flag) {
-      if (c === ' ') {
-        flag = false;
-      } else {
-        flag = true;
-        numberOfWordsInS++;
-      }
-    } else {
-      if (c === ' ') {
-        flag = false;
-      } else {
-        flag = true;
-      }
+    if (c === ' ') {
+      flag = false;
+    } else if (!flag) {
+      flag = true;
+      numberOfWordsInS++;
     }
   }
 
