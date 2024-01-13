@@ -1,6 +1,6 @@
 // Replace substring with newstr
-//Step 2:
-// Using const to declare variables if they don't change
+//Step 3:
+// Replacing the "do...while" loop with a more readable version
 
 const replaceSubstring = (str, substr, newstr) => {
   if (substr === '') {
@@ -9,17 +9,17 @@ const replaceSubstring = (str, substr, newstr) => {
     let src = str;
     let res = '';
 
-    do {
-      const index = src.indexOf(substr);
-      if (index === -1) {
-        return res + src;
-      } else {
-        const start = src.substring(0, index);
-        src = src.substring(index + substr.length, src.length);
-        res += start + newstr;
-      }
-    } while (true);
+    let index = src.indexOf(substr);
+    while (index !== -1) {
+      const start = src.substring(0, index);
+      src = src.substring(index + substr.length, src.length);
+      res += start + newstr;
+      index = src.indexOf(substr);
+    }
+
+    return res + src;
   }
 };
 
 module.exports = replaceSubstring;
+
