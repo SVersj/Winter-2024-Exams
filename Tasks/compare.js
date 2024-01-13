@@ -1,18 +1,20 @@
 // Compare two dictionaries
+//Step 1:
+// Correct the variable name and add parentheses in the function declaration to improve readability
 
-let compare = (first_values, ...parameters_LIST) => {
-  const second_values = parameters_LIST[0];
-  let a = Object.keys(first_values);
-  let b = Object.keys(second_values);
-  if (a.join('-') !== b.join('-')) return false;
-  let e = true;
-  for (c of a) {
-    if (first_values[c] === second_values[c]) e = e && true;
+let compare = (firstValues, ...parametersList) => {
+  const secondValues = parametersList[0];
+  let keysA = Object.keys(firstValues);
+  let keysB = Object.keys(secondValues);
+  if (keysA.join('-') !== keysB.join('-')) return false;
+  let result = true;
+  for (let key of keysA) {
+    if (firstValues[key] === secondValues[key]) result = result && true;
     else {
-      e = e && false;
+      result = result && false;
     }
   }
-  return e;
+  return result;
 };
 
 module.exports = compare;
