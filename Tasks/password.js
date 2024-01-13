@@ -1,14 +1,14 @@
 // Generate random password
-//Step 2:
-// Use a short form of the assignment operator to concatenate strings
+//Step 3:
+// Rename the key and index variables for clarity
 let GeneratePassword = (alphabet, length) => {
   const MAX = alphabet.length;
-  let key = '';
+  let password = '';
   for (let i = 0; i < length; i++) {
-    let index = Math.floor(Math.random() * MAX);
-    key += alphabet[index];
+    let randomIndex = Math.floor(Math.random() * MAX);
+    password += alphabet[randomIndex];
   }
-  return key;
+  return password;
 };
 
 module.exports = GeneratePassword;
