@@ -1,6 +1,7 @@
 // Compare two dictionaries
-//Step 1:
-// Correct the variable name and add parentheses in the function declaration to improve readability
+//Step 2:
+// Replace the check with a boolean value
+// Compare two dictionaries
 
 let compare = (firstValues, ...parametersList) => {
   const secondValues = parametersList[0];
@@ -9,12 +10,10 @@ let compare = (firstValues, ...parametersList) => {
   if (keysA.join('-') !== keysB.join('-')) return false;
   let result = true;
   for (let key of keysA) {
-    if (firstValues[key] === secondValues[key]) result = result && true;
-    else {
-      result = result && false;
-    }
+    result = result && (firstValues[key] === secondValues[key]);
   }
   return result;
 };
 
 module.exports = compare;
+
