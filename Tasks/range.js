@@ -1,19 +1,17 @@
 // Generate int array from given range
-// Step 2:
-// Check the condition at the beginning of the function and return an empty array immediately
-// if to is less than from
+// Step 3:
+// Rename the variables for better readability
 const createRange = (...range) => {
-  let [from, to] = range;
-  if (to < from) {
+  let [start, end] = range;
+  if (end < start) {
     return [];
   }
-  range = new Array(to - from + 1);
-  for (let i = from; i <= to; i++) {
-    range[i - from] = i;
+  range = new Array(end - start + 1);
+  for (let i = start; i <= end; i++) {
+    range[i - start] = i;
   }
   return range;
 };
 
 module.exports = createRange;
-
 
