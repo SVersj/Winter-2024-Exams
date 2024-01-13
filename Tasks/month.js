@@ -1,6 +1,6 @@
 // Get month number
-// Step 2:
-// Use const for variables that will not change
+// Step 3:
+// Simplify the return value condition using the ternary operator
 const Months = [
   'jan',
   'feb',
@@ -17,11 +17,9 @@ const Months = [
 ];
 
 const Month = (s) => {
-  const l = Months.length;
-  for (let i = 0; i < l; i++) {
-    if (s.toLowerCase().startsWith(Months[i])) return i + 1;
-  }
-  return -1;
+  const lowercaseInput = s.toLowerCase();
+  const index = Months.findIndex(month => lowercaseInput.startsWith(month));
+  return index !== -1 ? index + 1 : -1;
 };
 
 module.exports = Month;
