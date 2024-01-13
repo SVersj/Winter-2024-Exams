@@ -1,7 +1,6 @@
 // Generate random password
-//Step 4:
-//Enter default parameters for the GeneratePassword function
-// to make it easier to call the function without explicitly specifying the password length:
+//Step 5:
+// Use const to declare MAX, since this value does not change in the function body:
 let GeneratePassword = (alphabet, length = 8) => {
   const MAX = alphabet.length;
   let password = '';
